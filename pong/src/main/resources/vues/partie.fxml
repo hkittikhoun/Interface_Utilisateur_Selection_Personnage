@@ -1,0 +1,79 @@
+<!-- s'assurer d'avoir -->
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+    <!-- ajouter -->
+<?import pong.frontal.controles.CanvasPartie?>
+
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+    fx:controller="pong.frontal.vues.VuePartie"
+    fx:id="conteneurVuePartie"
+    styleClass="conteneur"
+    id="vue-partie">
+
+    <Pane styleClass="petit-espace-vertical"/>
+
+    <HBox VBox.vgrow="ALWAYS" styleClass="conteneur">
+
+        <Pane styleClass="petit-espace-horizontal"/>
+
+        <!-- ajouter -->
+        <CanvasPartie 
+            HBox.hgrow="ALWAYS" 
+            fx:id="canvasPartie" 
+            id="canvas-partie">
+        </CanvasPartie>
+
+        <Pane styleClass="petit-espace-horizontal"/>
+
+    </HBox>
+
+    <Pane styleClass="petit-espace-vertical"/>
+
+    <HBox styleClass="conteneur">
+
+        <Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal"/>
+
+       <Label
+            fx:id="labelNomPremierJoueur"
+            styleClass="gros-texte">
+        </Label>
+
+        <Pane  HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal"/>
+
+        <Label
+            fx:id="labelScorePremierJoueur"
+            styleClass="gros-texte">
+        </Label>
+
+        <Pane  HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal"/>
+
+        <Button 
+            fx:id="boutonQuitterPartie" 
+            text="%quitterPartie"
+            styleClass="gros-bouton"
+            id="bouton-quitter-partie">
+        </Button>
+
+        <Pane  HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal"/>
+
+        <Label
+            fx:id="labelScoreDeuxiemeJoueur"
+            styleClass="gros-texte">
+        </Label>
+
+        <Pane  HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal"/>
+
+        <Label
+            fx:id="labelNomDeuxiemeJoueur"
+            styleClass="gros-texte">
+        </Label>
+
+        <Pane  HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal"/>
+
+    </HBox>
+
+    <Pane styleClass="petit-espace-vertical"/>
+
+</VBox>

@@ -1,0 +1,53 @@
+{
+  "_C": "ModeleFileAttente",
+  "prochainIdRendezVous": 101,
+  "region": null,
+  "rendezVousDansOrdre": [
+    {
+      "_C": "RendezVousComplet",
+      "idRendezVous": "98",
+      "scoreDeuxiemeJoueur": 1,
+      "scorePremierJoueur": 0,
+      "premierJoueur": {
+        "_C": "Joueur",
+        "id": "afYg",
+        "prenom": "Chaaya",
+        "nom": "Josan"
+      },
+      "deuxiemeJoueur": {
+        "_C": "Joueur",
+        "id": "afYg",
+        "prenom": "Élisabeth",
+        "nom": "Ahmadi"
+      }
+    },
+    {
+      "_C": "RendezVousComplet",
+      "idRendezVous": "99",
+      "scoreDeuxiemeJoueur": 1,
+      "scorePremierJoueur": 1,
+      "premierJoueur": {
+        "_C": "Joueur",
+        "id": "afYg",
+        "prenom": "Bob",
+        "nom": "Chaussé"
+      },
+      "deuxiemeJoueur": {
+        "_C": "Joueur",
+        "id": "tQnV",
+        "prenom": "Louis",
+        "nom": "Josan"
+      }
+    },
+    {
+      "_C": "RendezVous",
+      "idRendezVous": "100",
+      "premierJoueur": {
+        "_C": "Joueur",
+        "id": "tQnV",
+        "prenom": "Mehdi",
+        "nom": "Augustin"
+      }
+    }
+  ]
+}

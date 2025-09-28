@@ -1,0 +1,48 @@
+# Java
+*.class
+
+# Gradle
+.gradle
+build
+!gradle-wrapper.jar
+
+# vim
+*.swp
+
+# emacs
+*~
+
+# Eclipse
+.settings
+.classpath
+.project
+.metadata
+bin
+
+# Idea
+.idea
+*.iml
+
+# VScode
+.vscode
+
+# MAC_OS
+.DS_Store
+
+# Ntro 
+/*/_storage/*.json
+/*/_storage/models/*.json
+/*/_storage/models/*/*.json
+/*/_storage/graphs
+/*/_storage/options
+/*/_storage/sessions
+/*/_storage/tmp
+/*/_storage/*.log
+/*/_storage/*.html
+
+# archives
+*.7z
+*.zip
+
+# ignorer /_storage s'il existe par erreur
+/_storage

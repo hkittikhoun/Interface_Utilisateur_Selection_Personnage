@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <?import ca.ntro.app.fx.controls.ResizableImage?>
+    <!-- Autre possibilité -->
+    <?import ca.ntro.app.fx.controls.ResizableAvatar?>
+    <?import javafx.scene.layout.*?>
+    <?import javafx.scene.control.*?>
+    <?import javafx.scene.image.*?>
+    <VBox xmlns:fx="http://javafx.com/fxml"
+        fx:controller="pong.frontal.vues.VueFileAttente" 
+        styleClass="conteneur"
+        id="vue-file-attente">
+
+        <Pane styleClass="petit-espace-vertical"/>
+
+        <ResizableImage
+            fx:id="logo"
+            VBox.vgrow="ALWAYS"
+            styleClass="logo">
+        </ResizableImage>
+        <!-- autre possibilité: ResizableAvatar -->
+
+        <Pane styleClass="petit-espace-vertical"/>
+
+        <HBox styleClass="conteneur">
+
+            <Button 
+                fx:id="boutonSInscrire" 
+                text="%sInscrire"
+                styleClass="gros-bouton"
+                id="bouton-s-inscrire">
+            </Button>
+
+            <!-- petit espace -->
+            <Pane styleClass="petit-espace-horizontal"/>
+
+            <!-- ajouter -->
+            <ComboBox fx:id="comboRegion" >
+            </ComboBox>
+
+        </HBox>
+
+        <!-- ajouter -->
+        <Pane VBox.vgrow="ALWAYS" styleClass="grand-espace-vertical"/>
+
+        <HBox styleClass="conteneur">
+
+            <Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal"/>
+
+            <ScrollPane HBox.hgrow="ALWAYS" fitToWidth="true" styleClass="defilement">
+
+                <VBox styleClass="conteneur" fx:id="conteneurRendezVous" id="conteneur-rendez-vous">
+                </VBox>
+
+            </ScrollPane>
+
+            <Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal"/>
+
+        </HBox>
+
+        <Pane VBox.vgrow="ALWAYS" styleClass="grand-espace-vertical"/>
+
+    </VBox>

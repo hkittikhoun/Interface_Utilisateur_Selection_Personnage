@@ -1,0 +1,71 @@
+{
+  "_C": "ModeleFileAttente",
+  "prochainIdRendezVous": 5,
+  "region": "AMERIQUE",
+  "rendezVousDansOrdre": [
+    {
+      "_C": "RendezVousComplet",
+      "idRendezVous": "AMERIQUE¤1",
+      "scoreDeuxiemeJoueur": 0,
+      "scorePremierJoueur": 0,
+      "premierJoueur": {
+        "_C": "Joueur",
+        "id": "I5MY",
+        "prenom": "Gregson",
+        "nom": "Heer"
+      },
+      "deuxiemeJoueur": {
+        "_C": "Joueur",
+        "id": "I5MY",
+        "prenom": "Marcel",
+        "nom": "Delisle"
+      }
+    },
+    {
+      "_C": "RendezVousComplet",
+      "idRendezVous": "AMERIQUE¤2",
+      "scoreDeuxiemeJoueur": 0,
+      "scorePremierJoueur": 0,
+      "premierJoueur": {
+        "_C": "Joueur",
+        "id": "I5MY",
+        "prenom": "Firas",
+        "nom": "Gonzales"
+      },
+      "deuxiemeJoueur": {
+        "_C": "Joueur",
+        "id": "I5MY",
+        "prenom": "Chaaya",
+        "nom": "Gonzales"
+      }
+    },
+    {
+      "_C": "RendezVousComplet",
+      "idRendezVous": "AMERIQUE¤3",
+      "scoreDeuxiemeJoueur": 0,
+      "scorePremierJoueur": 0,
+      "premierJoueur": {
+        "_C": "Joueur",
+        "id": "I5MY",
+        "prenom": "Marcel",
+        "nom": "Lagrois"
+      },
+      "deuxiemeJoueur": {
+        "_C": "Joueur",
+        "id": "I5MY",
+        "prenom": "Mehdi",
+        "nom": "Lagrois"
+      }
+    },
+    {
+      "_C": "RendezVous",
+      "idRendezVous": "AMERIQUE¤4",
+      "premierJoueur": {
+        "_C": "Joueur",
+        "id": "I5MY",
+        "prenom": "Firas",
+        "nom": "Ahmadi"
+      }
+    }
+  ]
+}

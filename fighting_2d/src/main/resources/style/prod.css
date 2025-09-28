@@ -1,0 +1,215 @@
+/* Conteneurs */
+.conteneur {
+  -fx-border-width: 0.8em;
+  -fx-alignment: center;
+  -fx-padding: 15px;
+  -fx-spacing: 10px;
+}
+
+#vue-racine {
+  -fx-background-image: url("../images/background.jpg");
+  -fx-background-size: cover;
+  -fx-background-position: center;
+}
+
+#vue-creation-profil {
+  -fx-alignment: top;
+  -fx-padding: 20px;
+  -fx-spacing: 10px;
+}
+
+/* Boutons */
+.gros-bouton {
+  -fx-background-color: linear-gradient(#686868, #232723, #373837, #757575),
+    linear-gradient(#020b02, #3a3a3a),
+    linear-gradient(#b9b9b9, #c2c2c2, #afafaf, #c8c8c8),
+    linear-gradient(#f5f5f5, #dbdbdb, #cacaca, #d7d7d7);
+  -fx-background-insets: 0, 1, 4, 5;
+  -fx-background-radius: 9, 8, 5, 4;
+  -fx-padding: 15px 40px;
+  -fx-font-family: "Helvetica";
+  -fx-font-size: 22px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #333333;
+}
+
+.gros-bouton:hover {
+  -fx-background-color: linear-gradient(#d32f2f, #b71c1c), #c62828, #e53935,
+    radial-gradient(center 50% 50%, radius 100%, #ff5252, #d32f2f);
+}
+
+.gros-bouton:pressed {
+  -fx-padding: 15px 40px;
+  -fx-background-insets: 2 0 0 0, 2 0 3 0, 2 0 4 0, 2 0 5 0;
+  -fx-scale-x: 1;
+  -fx-scale-y: 1;
+}
+
+.gros-bouton Text {
+  -fx-effect: dropshadow(one-pass-box, white, 0, 0, 0, 1);
+}
+
+#bouton-ajouter {
+  -fx-alignment: center;
+}
+
+/* Espacements */
+.petit-espace-horizontal {
+  -fx-min-width: 1em;
+  -fx-max-width: 2em;
+}
+
+.grand-espace-horizontal {
+  -fx-min-width: 2em;
+  -fx-max-width: 10em;
+}
+
+.mini-espace-vertical {
+  -fx-min-height: 0.1em;
+  -fx-max-height: 0.5em;
+}
+
+.petit-espace-vertical {
+  -fx-min-height: 3em;
+  -fx-max-height: 10em;
+}
+
+.grand-espace-vertical {
+  -fx-min-height: 3em;
+  -fx-max-height: 20em;
+}
+
+/* Menu */
+.menu {
+  -fx-alignment: center-right;
+  /**
+  -fx-max-height: 15px;
+  -fx-padding: 5px 10px;
+  */
+}
+
+/* Conteneur du fragment */
+.fragment-un-profil {
+  -fx-padding: 10px;
+  -fx-spacing: 10px;
+  -fx-background-color: #726f6f;
+  -fx-border-color: #000000;
+  -fx-border-width: 2px;
+  -fx-border-radius: 5px;
+  -fx-background-radius: 5px;
+}
+
+/* Style pour le nom du profil */
+.nom-profil {
+  -fx-font-size: 16px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #ffffff;
+  -fx-alignment: center-left;
+}
+
+/* Conteneurs pour les labels de victoire et défaite */
+.victoire-container,
+.defaite-container {
+  -fx-padding: 5px;
+  -fx-border-radius: 5px;
+  -fx-alignment: center-right;
+}
+
+.victoire-container {
+  -fx-background-color: blue;
+}
+
+.defaite-container {
+  -fx-background-color: red;
+}
+
+/* Style pour les labels de victoire et défaite */
+.victoire-profil,
+.defaite-profil {
+  -fx-font-size: 14px;
+  -fx-text-fill: white;
+}
+
+/* Conteneur pour les scores */
+.container-score {
+  -fx-alignment: center-right;
+}
+
+/* ComboBox */
+#combo-profil,
+#comboLangue {
+  -fx-pref-height: 40px;
+  -fx-font-size: 18px;
+}
+
+.combo-box {
+  -fx-background-color: linear-gradient(#686868, #232723, #373837, #757575),
+    linear-gradient(#020b02, #3a3a3a),
+    linear-gradient(#b9b9b9, #c2c2c2, #afafaf, #c8c8c8),
+    linear-gradient(#f5f5f5, #dbdbdb, #cacaca, #d7d7d7);
+  -fx-background-insets: 0, 1, 4, 5;
+  -fx-background-radius: 9, 8, 5, 4;
+  -fx-padding: 10px 20px;
+  -fx-font-family: "Helvetica";
+  -fx-font-size: 18px;
+  -fx-font-weight: bold;
+  -fx-text-fill: black;
+}
+
+.combo-box:hover {
+  -fx-background-color: linear-gradient(#d32f2f, #b71c1c), #c62828, #e53935,
+    radial-gradient(center 50% 50%, radius 100%, #ff5252, #d32f2f);
+}
+
+.combo-box:pressed {
+  -fx-padding: 8px 18px;
+  -fx-background-insets: 2 0 0 0, 2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+
+.combo-box .list-cell {
+  -fx-font-size: 18px;
+  -fx-font-weight: bold;
+  -fx-text-fill: black;
+}
+
+.combo-box-popup,
+.combo-box-popup .list-view {
+  -fx-background-color: linear-gradient(#757575, #4a4a4a);
+}
+
+.combo-box-popup .list-view .list-cell {
+  -fx-text-fill: black;
+}
+
+.combo-box-popup .list-view .list-cell:selected {
+  -fx-background-color: #d32f2f;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+  -fx-background-color: #b71c1c;
+}
+
+#canvas-creation-profil {
+  -fx-pref-width: 1000px;
+  -fx-pref-height: 380px; /* Maintient un ratio 3:2 */
+  -fx-max-height: 400px;
+  -fx-border-width: 0; /* Supprime la bordure */
+  -fx-border-color: red; /* Assure qu'aucune couleur de bordure n'est visible */
+}
+
+.gros-textfield {
+  -fx-background-color: linear-gradient(#686868, #232723, #373837, #757575),
+    linear-gradient(#020b02, #3a3a3a),
+    linear-gradient(#b9b9b9, #c2c2c2, #afafaf, #c8c8c8),
+    linear-gradient(#f5f5f5, #dbdbdb, #cacaca, #d7d7d7);
+  -fx-background-insets: 0, 1, 4, 5;
+  -fx-background-radius: 9, 8, 5, 4;
+  -fx-padding: 10px 20px;
+  -fx-font-family: "Helvetica";
+  -fx-font-size: 18px;
+  -fx-font-weight: bold;
+  -fx-text-fill: black;
+  -fx-border-color: transparent;
+  -fx-border-radius: 9;
+  -fx-pref-height: 62px; /* Augmente la hauteur */
+}

@@ -1,0 +1,113 @@
+plugins {
+    id 'local-java-plugin'
+    id 'local-fx-plugin'
+    id 'local-ntro-plugin'
+}
+
+dependencies {
+
+    ntroDependencies.split(',').each {
+        implementation files("../libs/${it}-${version}.jar")
+    }
+
+}
+
+def configCommune = {
+   classpath = sourceSets.main.runtimeClasspath
+   standardInput = System.in
+   jvmArgs('-Dfile.encoding=UTF-8')
+}
+
+def configApp = {
+   configure configCommune
+   mainClass = "pong.AppPong"
+   jvmArgs('-Dsun.java2d.opengl=true')
+}
+
+def configClient = {
+   configure configCommune
+   mainClass = "pong.ClientPong"
+   jvmArgs('-Dsun.java2d.opengl=true')
+}
+
+def configServeur = {
+   configure configCommune
+   mainClass = "pong.ServeurPong"
+}
+
+def configFr = {
+   jvmArgs('-Duser.language=fr')
+   args("language=fr")
+}
+
+def configEn = {
+   jvmArgs('-Duser.language=en')
+   args("language=en")
+}
+
+def configAlice = {
+   args("session=alice")
+   configure configFr
+}
+
+def configBob = {
+   args("session=bob")
+   configure configEn
+}
+
+def configCharlie = {
+   args("session=charlie")
+   configure configFr
+}
+
+task(pong, dependsOn: 'classes', type: JavaExec) {
+   configure configApp
+}
+
+task(pongFr, dependsOn: 'classes', type: JavaExec) {
+   configure configApp
+   configure configFr
+}
+
+task(pongEn, dependsOn: 'classes', type: JavaExec) {
+   configure configApp
+   configure configEn
+}
+
+task(alice, dependsOn: 'classes', type: JavaExec) {
+   configure configApp
+   configure configAlice
+}
+
+task(bob, dependsOn: 'classes', type: JavaExec) {
+   configure configApp
+   configure configBob
+}
+
+task(charlie, dependsOn: 'classes', type: JavaExec) {
+   configure configApp
+   configure configCharlie
+}
+
+task(serveur, dependsOn: 'classes', type: JavaExec) {
+   configure configServeur
+}
+
+task(client, dependsOn: 'classes', type: JavaExec) {
+   configure configClient
+}
+
+task(clientAlice, dependsOn: 'classes', type: JavaExec) {
+   configure configClient
+   configure configAlice
+}
+
+task(clientBob, dependsOn: 'classes', type: JavaExec) {
+   configure configClient
+   configure configBob
+}
+
+task(clientCharlie, dependsOn: 'classes', type: JavaExec) {
+   configure configClient
+   configure configCharlie
+}

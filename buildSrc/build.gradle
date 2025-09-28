@@ -1,0 +1,26 @@
+
+plugins {
+    id 'groovy-gradle-plugin'
+}
+
+
+
+gradlePlugin {
+    plugins {
+        LocalJavaPlugin {
+            id = 'local-java-plugin'
+            implementationClass = 'LocalJavaPluginPlugin'
+        }
+        LocalFxPlugin {
+            id = 'local-fx-plugin'
+            implementationClass = 'LocalFxPluginPlugin'
+        }
+        LocalNtroPlugin {
+            id = 'local-ntro-plugin'
+            implementationClass = 'LocalNtroPluginPlugin'
+        }
+    }
+}
+
+
+

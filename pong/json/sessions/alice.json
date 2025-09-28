@@ -1,0 +1,9 @@
+{
+  "_C": "SessionPong",
+  "vueCourante": "VueFileAttente",
+  "sessionId": "alice",
+  "modelSelections": {
+    "_C": "SelectionsByModel",
+    "selections": {}
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "_C": "ModelePartie",
+  "idRendezVous": "EUROPE¤2",
+  "infoJoueurParPosition": {
+    "GAUCHE": {
+      "_C": "InfoJoueur",
+      "score": 0,
+      "joueur": {
+        "_C": "Joueur",
+        "id": "I5MY",
+        "prenom": "Ashwin",
+        "nom": "Heer"
+      }
+    },
+    "DROITE": {
+      "_C": "InfoJoueur",
+      "score": 1,
+      "joueur": {
+        "_C": "Joueur",
+        "id": "I5MY",
+        "prenom": "Ashwin",
+        "nom": "Medjoubi"
+      }
+    }
+  }
+}

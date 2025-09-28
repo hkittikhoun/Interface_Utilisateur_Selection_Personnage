@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import pong.frontal.controles.FlexBoxRendezVous?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+    fx:controller="pong.frontal.fragments.FragmentRendezVousComplet" 
+    styleClass="conteneur,vue-rendez-vous">
+    <HBox>
+        <Pane styleClass="grand-espace-horizontal"/>
+        <FlexBoxRendezVous HBox.hgrow="ALWAYS" styleClass="conteneur, rendez-vous">
+            <Button 
+                fx:id="boutonDebuterPartie" 
+                text="%debuterPartie"
+                styleClass="gros-bouton">
+            </Button>
+            <Pane minHeight="20" minWidth="20"/>
+            <HBox alignment="CENTER_LEFT">
+                <Label
+                    fx:id="labelNomPremierJoueur"
+                    styleClass="gros-texte">
+                </Label>
+                <Pane minWidth="20" minHeight="20"/>
+                <Label
+                    text="Vs"
+                    styleClass="gros-texte">
+                </Label>
+                <Pane minWidth="20" minHeight="20"/>
+                <Label
+                    fx:id="labelNomDeuxiemeJoueur"
+                    styleClass="gros-texte">
+                </Label>
+            </HBox>
+            <!-- ajouter hgrow -->
+            <Pane HBox.hgrow="ALWAYS" minWidth="20" minHeight="20"/>
+            <Button 
+                fx:id="boutonRetirerRendezVous" 
+                text="%retirerRendezVous"
+                styleClass="gros-bouton,bouton-rouge">
+            </Button>
+
+                <Label
+                    fx:id="labelScorePremierJoueur"
+                    styleClass="gros-texte">
+                </Label>
+                                <Label
+                    text="-"
+                    styleClass="gros-texte">
+                </Label>
+
+
+                <Label
+                    fx:id="labelScoreDeuxiemeJoueur"
+                    styleClass="gros-texte">
+                </Label>
+
+
+
+        </FlexBoxRendezVous>
+        <Pane styleClass="grand-espace-horizontal"/>
+    </HBox>
+    <Pane styleClass="petit-espace-vertical"/>
+</VBox>

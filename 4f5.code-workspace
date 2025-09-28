@@ -1,0 +1,40 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+
+  "extensions": {
+    "recommendations": ["vscjava.vscode-java-pack"]
+  },
+
+  "settings": {
+    "files.exclude": {
+      ".vscode": true,
+      ".git": true,
+      ".gradle": true,
+      "gradle": true,
+      "gradlew": true,
+      "gradlew.bat": true,
+      "gradle.properties": true,
+      "settings.gradle": true,
+      "*/build.gradle": true,
+      "*/build": true,
+      "*/bin": true,
+      "**/.gitinclude": true,
+      "*/src/main/resources": true,
+      "*/_storage/options": true,
+      "*/_storage/sessions": true,
+      "buildSrc": true,
+      "libs": true,
+      ".gitignore": true,
+      "*.zip": true,
+      "scripts": true,
+      "4f5.code-workspace": true,
+      "*.swp": true
+    },
+    "java.compile.nullAnalysis.mode": "disabled",
+    "java.configuration.updateBuildConfiguration": "interactive"
+  }
+}

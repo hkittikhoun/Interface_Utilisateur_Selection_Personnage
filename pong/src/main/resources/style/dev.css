@@ -1,0 +1,228 @@
+.conteneur {
+  -fx-border-width: 0.8em;
+  -fx-alignment: center;
+}
+
+#vue-racine {
+  -fx-border-color: darkred;
+}
+
+#vue-file-attente {
+  -fx-border-color: darkblue;
+}
+
+.gros-bouton {
+  -fx-padding: 0.6em 1.15em 1.15em 1.15em;
+  -fx-background-insets: 0, 0 0 0.4em 0, 0 0 0.45em 0, 0 0 0.5em 0;
+  -fx-background-radius: 0.6em;
+  -fx-background-color: linear-gradient(
+      from 0% 93% to 0% 100%,
+      #a34313 0%,
+      #903b12 100%
+    ),
+    #9d4024, #d86e3a,
+    radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c);
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 0.4em, 0, 0, 0.1em);
+  -fx-font-weight: bold;
+  -fx-font-size: 1.1em;
+}
+
+.gros-bouton:pressed {
+  -fx-scale-x: 0.9;
+  -fx-scale-y: 0.9;
+}
+
+.gros-bouton:hover {
+  -fx-cursor: hand;
+}
+
+#vue-partie {
+  -fx-border-color: darkgreen;
+}
+
+.petit-espace-horizontal {
+  -fx-min-width: 1em;
+  -fx-max-width: 2em;
+}
+
+.grand-espace-horizontal {
+  -fx-min-width: 2em;
+  -fx-max-width: 10em;
+}
+
+.mini-espace-vertical {
+  -fx-min-height: 1em;
+  -fx-max-height: 2em;
+}
+
+.petit-espace-vertical {
+  -fx-min-height: 3em;
+  -fx-max-height: 10em;
+}
+
+.grand-espace-vertical {
+  -fx-min-height: 3em;
+  -fx-max-height: 20em;
+}
+
+#vue-file-attente {
+  -fx-alignment: top-center;
+}
+
+.label-rendez-vous {
+  -fx-text-fill: derive(black, 30%);
+}
+
+.defilement {
+}
+
+.bouton-rouge {
+  -fx-background-color: linear-gradient(
+      from 90% 100% to 0% 100%,
+      #b72353 0%,
+      #9f2836 100%
+    ),
+    #a83145, #ea5c63,
+    radial-gradient(center 50% 50%, radius 100%, #ea5c62, #d33a54);
+}
+
+.scroll-bar {
+  -fx-background-color: transparent;
+  -fx-border-color: transparent;
+}
+
+.scroll-bar .track {
+  -fx-background-color: derive(black, 75%);
+  -fx-border-color: transparent;
+  -fx-background-radius: 0.6em;
+}
+
+.scroll-bar .thumb {
+  -fx-padding: 0.6em 1.15em 1.15em 1.15em;
+  -fx-background-insets: 0, 0 0 0.4em 0, 0 0 0.45em 0, 0 0 0.5em 0;
+  -fx-background-radius: 0.6em;
+  -fx-background-color: linear-gradient(
+      from 0% 93% to 0% 100%,
+      #a34313 0%,
+      #903b12 100%
+    ),
+    #9d4024, #d86e3a,
+    radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c);
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 0.3em, 0, 0, 0.08em);
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button,
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+  -fx-shape: " ";
+  -fx-visibility: hidden;
+}
+
+.scroll-pane .viewport {
+  -fx-background-color: transparent;
+  -fx-background: transparent;
+}
+
+.scroll-pane {
+  -fx-background-color: transparent;
+  -fx-background: transparent;
+  -fx-hbar-policy: never;
+  -fx-vbar-policy: always;
+}
+
+.combo-box {
+  -fx-padding: 0.6em 1.15em 1.15em 1.15em;
+  -fx-background-insets: 0, 0 0 0.4em 0, 0 0 0.45em 0, 0 0 0.5em 0;
+  -fx-background-radius: 0.6em;
+  -fx-background-color: linear-gradient(
+      from 0% 93% to 0% 100%,
+      #a34313 0%,
+      #903b12 100%
+    ),
+    #9d4024, #d86e3a,
+    radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c);
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 0.3em, 0, 0, 0.08em);
+  -fx-font-weight: bold;
+  -fx-font-size: 1.1em;
+}
+
+.combo-box-popup {
+  -fx-background-color: derive(orange, 30%);
+}
+
+.combo-box-popup .list-view {
+  -fx-background-color: derive(orange, 30%);
+}
+
+.combo-box-popup .list-view .list-cell {
+  -fx-padding: 0.6em 1.15em 1.15em 1.15em;
+  -fx-background-insets: 0, 0 0 0.4em 0, 0 0 0.45em 0, 0 0 0.5em 0;
+  -fx-background-radius: 0.6em;
+  -fx-background-color: derive(orange, 40%);
+  -fx-font-weight: bold;
+  -fx-font-size: 1.1em;
+}
+
+.combo-box-popup .list-view .list-cell:selected {
+  -fx-background-color: #d86e3a;
+  -fx-padding: 0.6em 1.15em 1.15em 1.15em;
+  -fx-background-insets: 0, 0 0 0.4em 0, 0 0 0.45em 0, 0 0 0.5em 0;
+  -fx-background-radius: 0.6em;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 1, 1), 4, 0, 0, 1);
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+  -fx-background-color: #9d4024;
+  -fx-padding: 0.6em 1.15em 1.15em 1.15em;
+  -fx-background-insets: 0, 0 0 0.4em 0, 0 0 0.45em 0, 0 0 0.5em 0;
+  -fx-background-radius: 0.6em;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 1, 1), 4, 0, 0, 1);
+}
+
+.menu {
+  -fx-alignment: center-right;
+}
+
+.bouton-rouge {
+  -fx-background-color: linear-gradient(
+      from 90% 100% to 0% 100%,
+      #b72353 0%,
+      #9f2836 100%
+    ),
+    #a83145, #ea5c63,
+    radial-gradient(center 50% 50%, radius 100%, #ea5c62, #d33a54);
+}
+
+.rendez-vous {
+  -fx-padding: 8 15 15 15;
+  -fx-background-color: derive(black, 75%);
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 4, 0, 0, 1);
+  -fx-background-insets: 0, 0 0 5 0, 0 0 6 0, 0 0 7 0;
+  -fx-background-radius: 8;
+}
+
+.gros-texte {
+  -fx-text-fill: derive(black, 25%);
+  -fx-font-size: 3em;
+}
+
+.logo {
+  -fx-min-width: 10em;
+  -fx-max-width: 30em;
+
+  -fx-min-height: 10em;
+  -fx-max-height: 30em;
+}
+
+.image-langue {
+  -fx-min-width: 3em;
+  -fx-max-width: 3em;
+
+  -fx-min-height: 2em;
+  -fx-max-height: 2em;
+}
+
+.fragment-une-langue {
+  -fx-background-color: transparent;
+}

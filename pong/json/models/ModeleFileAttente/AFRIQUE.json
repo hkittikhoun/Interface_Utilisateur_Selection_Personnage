@@ -1,0 +1,25 @@
+{
+  "_C": "ModeleFileAttente",
+  "prochainIdRendezVous": 2,
+  "region": "AFRIQUE",
+  "rendezVousDansOrdre": [
+    {
+      "_C": "RendezVousComplet",
+      "idRendezVous": "AFRIQUE¤1",
+      "scoreDeuxiemeJoueur": 0,
+      "scorePremierJoueur": 0,
+      "premierJoueur": {
+        "_C": "Joueur",
+        "id": "I5MY",
+        "prenom": "Firas",
+        "nom": "Medjoubi"
+      },
+      "deuxiemeJoueur": {
+        "_C": "Joueur",
+        "id": "I5MY",
+        "prenom": "Mehdi",
+        "nom": "Heer"
+      }
+    }
+  ]
+}

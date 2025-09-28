@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import fighting_2d.frontal.controles.CanvasCreationProfil?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fighting_2d.frontal.vues.VueCreationProfil"
+      styleClass="conteneur"
+      id="vue-creation-profil"
+      spacing="20">
+
+    <!-- Premier HBox pour bouton retour, logo et ComboBox -->
+    <HBox alignment="TOP_CENTER" spacing="10">
+
+        <HBox alignment="TOP_LEFT" HBox.hgrow="ALWAYS">
+
+            <!-- Bouton Retour à gauche -->
+            <Button fx:id="boutonRetour"
+                    text="%retourVue"
+                    styleClass="gros-bouton"
+                    id="bouton-retour"/>
+
+            <!-- Logo à côté du bouton retour -->
+            <ImageView fitWidth="200" fitHeight="150" style="-fx-translate-y: -70; -fx-translate-x: -55;">
+                <image>
+                    <Image url="@/images/logo.png" />
+                </image>
+            </ImageView>
+
+            <ComboBox fx:id="comboRegion" >
+            </ComboBox>
+
+        </HBox>
+
+        <HBox alignment="TOP_RIGHT" HBox.hgrow="ALWAYS">
+            <Button fx:id="boutonSupprimer"
+                    text="%supprimerProfil"
+                    styleClass="gros-bouton"
+                    id="bouton-supprimer"/>
+
+            <Pane styleClass="grand-espace-horizontal"/>
+
+            <!-- ComboBox en haut à droite -->
+            <ComboBox fx:id="comboBoxProfils"
+                    id="combo-profil" />
+
+        </HBox>
+
+    </HBox>
+    <!-- Deuxième VBox pour centrer le bouton Ajouter -->
+    <HBox spacing="20" style="-fx-padding: 20; -fx-alignment: center;">
+        <Button fx:id="boutonAjouter"
+                text="%ajouterProfil"
+                styleClass="gros-bouton"
+                id="bouton-ajouter"/>
+        <TextField fx:id="textFieldNomProfil"
+           promptText="%nomProfil"
+           styleClass="gros-textfield"
+           id="text-field-nom-profil"/>
+    </HBox>
+
+    <CanvasCreationProfil
+        HBox.hgrow="ALWAYS"
+        VBox.vgrow="NEVER"
+        fx:id="canvasCreationProfil"
+        id="canvas-creation-profil">
+    </CanvasCreationProfil>
+</VBox>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import ca.ntro.app.fx.controls.*?>
+
+<HBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fighting_2d.frontal.fragments.FragmentUnProfil" 
+      styleClass="conteneur,fragment-un-profil">
+
+    <Label
+        fx:id="labelNomProfil"
+        styleClass="nom-profil">
+    </Label>
+
+    <Pane styleClass="petit-espace-horizontal"/>
+
+    <VBox styleClass="container-score">
+
+        <HBox styleClass="victoire-container">
+            <Label
+                fx:id="labelVictoire"
+                styleClass="victoire-profil"
+                text="%victoireProfil">
+            </Label>
+            <Label
+                fx:id="labelVictoireProfil"
+                styleClass="victoire-profil">
+            </Label>
+        </HBox>
+        <HBox styleClass="defaite-container">
+            <Label
+                fx:id="labelDefaite"
+                styleClass="defaite-profil"
+                text="%defaiteProfil">
+            </Label>
+            <Label
+                fx:id="labelDefaiteProfil"
+                styleClass="defaite-profil">
+            </Label>
+        </HBox>
+
+    </VBox>
+
+</HBox>

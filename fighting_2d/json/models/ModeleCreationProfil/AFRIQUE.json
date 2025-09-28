@@ -1,0 +1,40 @@
+{
+  "_C": "ModeleCreationProfil",
+  "nomProfil": null,
+  "profils": [
+    {
+      "_C": "Profil",
+      "caractere": null,
+      "id": "MhNk",
+      "nom": "Ashwin Castillo",
+      "nbDefaite": 0,
+      "nbVictoire": 0
+    },
+    {
+      "_C": "Profil",
+      "caractere": null,
+      "id": "MhNk",
+      "nom": "Bob Ahmadi",
+      "nbDefaite": 0,
+      "nbVictoire": 0
+    },
+    {
+      "_C": "Profil",
+      "caractere": null,
+      "id": "cO0m",
+      "nom": "Marcel Gonzales",
+      "nbDefaite": 0,
+      "nbVictoire": 0
+    },
+    {
+      "_C": "Profil",
+      "caractere": null,
+      "id": "cO0m",
+      "nom": "Bob Ahmadi",
+      "nbDefaite": 0,
+      "nbVictoire": 0
+    }
+  ],
+  "region": "AFRIQUE",
+  "profilCourant": 0
+}

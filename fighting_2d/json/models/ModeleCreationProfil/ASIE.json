@@ -1,0 +1,16 @@
+{
+  "_C": "ModeleCreationProfil",
+  "nomProfil": null,
+  "profils": [
+    {
+      "_C": "Profil",
+      "caractere": null,
+      "id": "MhNk",
+      "nom": "Alice Abdenouri",
+      "nbDefaite": 0,
+      "nbVictoire": 0
+    }
+  ],
+  "region": "ASIE",
+  "profilCourant": 0
+}

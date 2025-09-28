@@ -1,0 +1,17 @@
+{
+  "_C": "SessionPong",
+  "regionCourante": "AMERIQUE",
+  "vueCourante": "VueFileAttente",
+  "sessionId": "bob",
+  "modelSelections": {
+    "_C": "SelectionsByModel",
+    "selections": {
+      "ModeleFileAttente": {
+        "_C": "SelectionsOneModel",
+        "selections": [
+          "AMERIQUE"
+        ]
+      }
+    }
+  }
+}

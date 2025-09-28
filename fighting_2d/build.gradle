@@ -1,0 +1,127 @@
+plugins {
+    id 'local-java-plugin'
+    id 'local-fx-plugin'
+    id 'local-ntro-plugin'
+}
+
+dependencies {
+
+    ntroDependencies.split(',').each {
+        implementation files("../libs/${it}-${version}.jar")
+    }
+
+}
+
+def configCommune = {
+   classpath = sourceSets.main.runtimeClasspath
+   standardInput = System.in
+   jvmArgs('-Dfile.encoding=UTF-8')
+}
+
+def configApp = {
+   configure configCommune
+   mainClass = "fighting_2d.AppFighting2D"
+   jvmArgs('-Dsun.java2d.opengl=true')
+}
+
+def configClient = {
+   configure configCommune
+   mainClass = "fighting_2d.ClientFighting"
+   jvmArgs('-Dsun.java2d.opengl=true')
+}
+
+def configServeur = {
+   configure configCommune
+   mainClass = "fighting_2d.ServeurFighting"
+}
+
+def configFr = {
+   jvmArgs('-Duser.language=fr')
+   args("language=fr")
+}
+
+def configEn = {
+   jvmArgs('-Duser.language=en')
+   args("language=en")
+}
+
+def configAlice = {
+   args("session=alice")
+   configure configFr
+}
+
+def configBob = {
+   args("session=bob")
+   configure configEn
+}
+
+def configCharlie = {
+   args("session=charlie")
+   configure configFr
+}
+def configHugo = {
+   args("session=hugo")
+   configure configFr
+}
+
+task(fighting_2d, dependsOn: 'classes', type: JavaExec) {
+   configure configApp
+}
+
+task(fighting_2dFr, dependsOn: 'classes', type: JavaExec) {
+   configure configApp
+   configure configFr
+}
+
+task(fighting_2dEn, dependsOn: 'classes', type: JavaExec) {
+   configure configApp
+   configure configEn
+}
+
+task(alice, dependsOn: 'classes', type: JavaExec) {
+   configure configApp
+   configure configAlice
+}
+
+task(bob, dependsOn: 'classes', type: JavaExec) {
+   configure configApp
+   configure configBob
+}
+
+task(charlie, dependsOn: 'classes', type: JavaExec) {
+   configure configApp
+   configure configCharlie
+}
+
+task(hugo, dependsOn: 'classes', type: JavaExec) {
+   configure configApp
+   configure configHugo
+}
+
+task(serveur, dependsOn: 'classes', type: JavaExec) {
+   configure configServeur
+}
+
+task(client, dependsOn: 'classes', type: JavaExec) {
+   configure configClient
+}
+
+task(clientAlice, dependsOn: 'classes', type: JavaExec) {
+   configure configClient
+   configure configAlice
+}
+
+task(clientBob, dependsOn: 'classes', type: JavaExec) {
+   configure configClient
+   configure configBob
+}
+
+task(clientCharlie, dependsOn: 'classes', type: JavaExec) {
+   configure configClient
+   configure configCharlie
+}
+
+task(clientHugo, dependsOn: 'classes', type: JavaExec) {
+   configure configClient
+   configure configHugo
+}

@@ -1,0 +1,21 @@
+{
+  "_C": "OptionsImpl",
+  "errorDialog": true,
+  "isProd": false,
+  "coreOptions": {
+    "_C": "CoreOptionsImpl",
+    "sessionsPath": "${storagePath}/sessions",
+    "projectPath": "${userDir}",
+    "javaPath": "${srcPath}/main/java",
+    "resourcesPath": "${srcPath}/main/resources",
+    "srcPath": "${projectPath}/src",
+    "optionsPath": "${storagePath}/options",
+    "displayWarnings": true,
+    "storagePath": "${projectPath}/_storage",
+    "modelsPath": "${storagePath}/models",
+    "graphsPath": "${storagePath}/graphs",
+    "displayTasks": true,
+    "tmpPath": "${storagePath}/tmp"
+  },
+  "useJarResources": false
+}

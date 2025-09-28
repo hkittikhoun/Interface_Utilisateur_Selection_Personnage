@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.* ?>
+<?import ca.ntro.app.fx.controls.*?>
+
+<HBox xmlns:fx="http://javafx.com/fxml"
+    fx:controller="pong.frontal.fragments.FragmentUneLangue" 
+    styleClass="conteneur,fragment-une-langue">
+
+    <ResizableImage
+        fx:id="imageLangue"
+        HBox.hgrow="ALWAYS"
+        styleClass="image-langue">
+    </ResizableImage>
+
+    <Pane fx:id="espace" styleClass="petit-espace-horizontal"/>
+
+	<Label fx:id="labelLangue" styleClass="label-langue" />
+
+</HBox>

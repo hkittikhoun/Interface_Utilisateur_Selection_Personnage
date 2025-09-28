@@ -1,0 +1,118 @@
+import org.gradle.plugins.ide.eclipse.model.SourceFolder;
+
+plugins {
+    id 'java-library'
+
+    // MODULES
+    //id 'org.gradlex.extra-java-module-info'
+
+    id 'eclipse'
+}
+
+class LocalJavaPluginExtension implements Serializable {
+   List<String> modules = []
+}
+
+def extension = project.extensions.create('localJavaPlugin', LocalJavaPluginExtension) 
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+    // MODULES
+    //modularity.inferModulePath = true
+    [compileJava, compileTestJava]*.options*.compilerArgs = ['-parameters', '-Xlint:none']
+}
+
+tasks.withType(Copy) {
+   duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+tasks.withType(Jar) {
+   duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+tasks.withType(JavaExec) {
+   classpath = sourceSets.main.runtimeClasspath
+   standardInput = System.in
+   jvmArgs('-Dfile.encoding=UTF-8')
+   jvmArgs("-Duser.dir=${projectDir}")
+}
+
+
+// MODULES
+/*
+extraJavaModuleInfo {
+    failOnMissingModuleInfo = false
+    automaticModule 'Java-WebSocket-1.5.3.jar', 'org.java_websocket'
+}
+*/
+
+javadoc {
+    options.addStringOption("--frames")
+    options.encoding = 'UTF-8'
+    options.windowTitle = "${project.name}"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.slf4j:slf4j-nop:1.7.30'
+    //implementation 'org.slf4j:slf4j-simple:1.7.30'
+}
+
+tasks.clean {
+    doFirst {
+        new File("${project.projectDir}/build").deleteDir()
+        new File("${project.projectDir}/bin").deleteDir()
+        new File("${project.projectDir}/.settings").deleteDir()
+        new File("${project.projectDir}/.project").delete()
+        new File("${project.projectDir}/.classpath").delete()
+    }
+}
+
+sourceSets {
+    // MODULES
+    //main.output.resourcesDir = 'build/classes/java/main'
+
+    test {
+        java {
+            srcDirs = ["src/main/java"]
+        }
+    }
+}
+
+eclipse {
+    classpath {
+        file {
+            whenMerged {
+                entries = entries.findAll { it instanceof SourceFolder ? ((SourceFolder)it).output != "bin/test" : true }
+
+                // MODULES
+                /*
+                def modules = extension.modules
+
+                modules += ['javafx', 'ntro']
+
+                entries.each { entry ->
+
+                    if(entry instanceof org.gradle.plugins.ide.eclipse.model.AbstractClasspathEntry) {
+
+                        def classpathEntry = (org.gradle.plugins.ide.eclipse.model.AbstractClasspathEntry) entry;
+
+                        if(modules.any{moduleName -> classpathEntry.path.contains(moduleName)}){
+
+                            classpathEntry.getEntryAttributes().put("module","true")
+                        }
+                    }
+                }*/
+            }
+        }
+    }
+}
+
+tasks.eclipse.dependsOn(build)
+
+
+

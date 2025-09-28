@@ -1,0 +1,17 @@
+{
+  "_C": "SessionFighting2D",
+  "regionCourante": "AMERIQUE",
+  "vueCourante": "VueCreationProfil",
+  "sessionId": "hugo",
+  "modelSelections": {
+    "_C": "SelectionsByModel",
+    "selections": {
+      "ModeleCreationProfil": {
+        "_C": "SelectionsOneModel",
+        "selections": [
+          "AMERIQUE"
+        ]
+      }
+    }
+  }
+}

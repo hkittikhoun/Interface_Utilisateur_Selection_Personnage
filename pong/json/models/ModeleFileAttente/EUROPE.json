@@ -1,0 +1,35 @@
+{
+  "_C": "ModeleFileAttente",
+  "prochainIdRendezVous": 3,
+  "region": "EUROPE",
+  "rendezVousDansOrdre": [
+    {
+      "_C": "RendezVous",
+      "idRendezVous": "EUROPE¤1",
+      "premierJoueur": {
+        "_C": "Joueur",
+        "id": "I5MY",
+        "prenom": "Élisabeth",
+        "nom": "Ahmadi"
+      }
+    },
+    {
+      "_C": "RendezVousComplet",
+      "idRendezVous": "EUROPE¤2",
+      "scoreDeuxiemeJoueur": 0,
+      "scorePremierJoueur": 0,
+      "premierJoueur": {
+        "_C": "Joueur",
+        "id": "I5MY",
+        "prenom": "Ashwin",
+        "nom": "Heer"
+      },
+      "deuxiemeJoueur": {
+        "_C": "Joueur",
+        "id": "I5MY",
+        "prenom": "Ashwin",
+        "nom": "Medjoubi"
+      }
+    }
+  ]
+}

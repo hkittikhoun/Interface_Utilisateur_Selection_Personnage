@@ -1,0 +1,17 @@
+{
+  "_C": "ModeleFileAttente",
+  "prochainIdRendezVous": 2,
+  "region": "ASIE",
+  "rendezVousDansOrdre": [
+    {
+      "_C": "RendezVous",
+      "idRendezVous": "ASIE¤1",
+      "premierJoueur": {
+        "_C": "Joueur",
+        "id": "I5MY",
+        "prenom": "Gregson",
+        "nom": "Abdenouri"
+      }
+    }
+  ]
+}
